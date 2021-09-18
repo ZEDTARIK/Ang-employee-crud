@@ -1,3 +1,69 @@
-<p>
-  list-employee works!
-</p>
+<div class="panel panel-primary" *ngFor="let employee of employees">
+  <div class="panel-heading">
+    <h3 class="panel-title"> {{ employee.name }} </h3>
+  </div>
+  <div class="panel-body">
+
+    <div class="col-xs-12">
+      <div class="row vertical-align">
+
+        <!-- For images-->
+        <div class="col-xs-4">
+          <img [src]="employee.photoPath" class="ImagePhoto">
+        </div>
+        <!-- Fin images-->
+        <!-- For Label and value-->
+        <div class="col-xs-8">
+
+          <div class="row">
+            <div class="col-xs-2">Gender</div>
+            <div class="col-xs-10">: {{employee.gender}} </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2">Date of Birth</div>
+            <div class="col-xs-10">: {{employee.dateOfBirth | date}} </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-2">Contact Preference</div>
+            <div class="col-xs-10">: {{employee.contactPreference}} </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-2">Gender</div>
+            <div class="col-xs-10">: {{employee.gender}} </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-2">Phone</div>
+            <div class="col-xs-10">: {{employee.phoneNumber}} </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-2">Email</div>
+            <div class="col-xs-10">: {{employee.email}} </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2">Department</div>
+            <div class="col-xs-10">: {{employee.department}} </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2">Is Active</div>
+            <div class="col-xs-10">: {{employee.isActive}} </div>
+          </div>
+
+        </div>
+        <!-- Fin Label and value-->
+
+      </div>
+    </div>
+
+  </div>
+</div>
